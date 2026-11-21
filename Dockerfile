@@ -47,7 +47,7 @@ COPY server/package.json server/package-lock.json ./
 # Native Node modules compile here when a matching prebuild is unavailable;
 # neither the compiler nor npm's download cache is copied into the final image.
 RUN --mount=type=cache,target=/root/.npm \
-    npm ci --omit=dev
+    ONNXRUNTIME_NODE_INSTALL_CUDA=skip npm ci --omit=dev
 
 FROM architecture-check AS native-workers
 RUN --mount=type=cache,id=dnf-${FEDORA_VERSION}-native-workers,target=/var/cache/libdnf5,sharing=locked \
