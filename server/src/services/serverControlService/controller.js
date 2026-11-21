@@ -8,7 +8,7 @@ const Docker = require('dockerode');
 
 const docker = new Docker({ socketPath: '/var/run/docker.sock' });
 const TARGET_CONTAINER_NAME = 'multirover';
-const TARGET_IMAGE = process.env.MULTIROVER_TARGET_IMAGE || 'ghcr.io/legop3/multiroombarover:latest';
+const TARGET_IMAGE = process.env.MULTIROVER_TARGET_IMAGE || 'ghcr.io/caydurover2/multiroombarover:latest';
 // A registry port is not a tag separator. Strip a digest before splitting the tag.
 const configuredName = TARGET_IMAGE.split('@')[0];
 const tagSeparator = configuredName.lastIndexOf(':');

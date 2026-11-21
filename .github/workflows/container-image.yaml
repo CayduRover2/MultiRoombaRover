@@ -48,7 +48,7 @@ jobs:
         id: image-metadata
         uses: docker/metadata-action@v6
         with:
-          images: ghcr.io/legop3/multiroombarover
+          images: ghcr.io/caydurover2/multiroombarover
           flavor: latest=false
           tags: |
             type=raw,value=latest,enable={{is_default_branch}}

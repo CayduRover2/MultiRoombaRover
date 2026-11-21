@@ -2,7 +2,7 @@
 name: multirover
 
 # Change this one line to use a development branch image.
-x-multirover-image: &multirover-image ghcr.io/legop3/multiroombarover:latest
+x-multirover-image: &multirover-image ghcr.io/caydurover2/multiroombarover:latest
 
 services:
   server:
